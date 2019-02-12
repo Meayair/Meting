@@ -1362,4 +1362,19 @@ class Meting
 
         return $result;
     }
+    
+    /**
+    *
+    */
+    public function dailysongs(){
+         $api = array(
+                'method' => 'POST',
+                'url'    => 'https://music.163.com/weapi/v2/discovery/recommend/songs',
+                'encode' => 'netease_AESCBC',
+                'format' => 'comments',
+            );
+            return $this->exec($this->netease_AESCBC($api));
+    }
+    
+    
 }
